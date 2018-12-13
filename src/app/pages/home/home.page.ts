@@ -9,14 +9,12 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class HomePage {
+  content: any;
+
   constructor(
     public navCtrl: NavController,
     private http: HttpClient
   ) {
-    this.http.get('http://localhost:3000/product/get/all')
-      .subscribe(as => {
-        console.log(as);
-      });
 
   }
 }
